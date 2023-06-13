@@ -24,12 +24,12 @@ const Appbar = () => {
     {
       name: "projects",
       to: "/#projects",
-      isVisible: useIntersection("#work", "-100px"),
+      isVisible: useIntersection("#projects", "-100px"),
     },
     {
       name: "contacts",
       to: "/#contact",
-      isVisible: useIntersection("#contact", "-100px"),
+      isVisible: useIntersection("#contact", "0px"),
     },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ const Appbar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row container justify-between align-middle content-center fixed  min-w-full md:w-auto  py-2 px-5 md:px-24 lg:px-24 pb-5">
+    <div className="flex flex-col md:flex-row lg:flex-row container justify-between align-middle content-center fixed  min-w-full md:w-auto  py-2 px-5 md:px-24 lg:px-24 pb-5 z-50">
       <div className="flex flex-grow-0 justify-between align-middle content-center items-center">
         <Image
           src={"/images/TurbanCoder.png"}

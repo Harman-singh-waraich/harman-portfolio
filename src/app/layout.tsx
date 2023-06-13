@@ -2,6 +2,7 @@ import Appbar from "@/pages/Appbar";
 import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
+import { Footer } from "@/pages/Footer";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Appbar />
         <SocialBar />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
