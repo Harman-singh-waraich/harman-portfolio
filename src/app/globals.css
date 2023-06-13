@@ -26,5 +26,5 @@ html {
 }
 #contact {
   scroll-snap-align: start;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 10px;
 }

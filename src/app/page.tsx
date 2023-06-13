@@ -8,7 +8,7 @@ import { Footer } from "@/pages/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-2 md:px-24 lg:px-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-4 md:px-24 lg:px-24">
       <About />
       <Skills />
       <Projects />

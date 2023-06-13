@@ -4,22 +4,24 @@ import Animation from "./player";
 export function About() {
   return (
     <div id="about-me" className="min-h-screen py-28 min-w-full">
-      <div className="flex justify-content-center flex-col">
+      <div className="flex justify-content-center flex-col ">
         <div>
           <span
-            className="text-3xl font-bold "
+            className="text-xl md:text-3xl font-bold "
             style={{
               color: "#C778DE",
             }}
           >
             /
           </span>
-          <span className="text-3xl font-bold text-white">about-me</span>
+          <span className="text-xl md:text-3xl font-bold text-white">
+            about-me
+          </span>
         </div>
-        <div className="text-base text-white py-3"> Who am i?</div>
+        <div className=" text-sm  md:text-base text-white py-3"> Who am i?</div>
         {/* content */}
-        <div className="flex justify-between">
-          <div className="w-full md:w-1/2 lg:w-1/2 text-base text-gray-400 text-left py-3">
+        <div className="flex justify-between flex-col md:flex-row">
+          <div className="w-full md:w-1/2 lg:w-1/2 text-sm  md:text-base text-gray-400 text-left py-3">
             Hello, i’m Harmeet! <br />
             <br />
             <br />
@@ -31,9 +33,11 @@ export function About() {
             online. I always strive to learn about the newest technologies and
             frameworks.
           </div>
-          <div className="w-full md:w-1/2 lg:w-1/2">
+          <div className="w-full md:w-1/2 lg:w-1/2 flex justify-center items-center">
             {" "}
-            <Animation />
+            <div className=" w-1/4 md:w-full lg:w-1/2">
+              <Animation />
+            </div>
           </div>
         </div>
       </div>

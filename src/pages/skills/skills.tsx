@@ -45,18 +45,23 @@ export function Skills() {
       <div className="flex  flex-col relative min">
         <div>
           <span
-            className="text-3xl font-bold "
+            className="text-xl md:text-3xl font-bold "
             style={{
               color: "#C778DE",
             }}
           >
             /
           </span>
-          <span className="text-3xl font-bold text-white">skills</span>
+          <span className="text-xl md:text-3xl font-bold text-white">
+            skills
+          </span>
         </div>
-        <div className="text-base text-white py-3"> What im good at?</div>
+        <div className="text-sm md:text-base text-white py-3">
+          {" "}
+          What im good at?
+        </div>
         {/* content */}
-        <div className="flex  flex-row justify-between align-middle items-start flex-wrap mt-10">
+        <div className="flex  flex-row justify-between  items-start flex-wrap mt-5 md:mt-10">
           {skills.map((skill: Skill) => (
             <SkillCard skill={skill} />
           ))}

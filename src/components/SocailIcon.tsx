@@ -10,9 +10,12 @@ export const SocailIcon = ({ platform }: { platform: string }) => {
     <a
       href={`${SOCIAL_LINKS[platform]}`}
       target="_blank"
-      className="cursor-pointer  transition-all hover:scale-125"
+      className="cursor-pointer  transition-all duration-500 hover:scale-125"
     >
-      <img src={`/images/${platform}.svg`} height={"28px"} width={"28px"} />
+      <img
+        src={`/images/${platform}.svg`}
+        className=" w-7 md:w-8 px-1 md:px-0"
+      />
     </a>
   );
 };
