@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 const useIntersection = (id: string, rootMargin: string) => {
   const [isVisible, setState] = useState(false);
   if (typeof window === "undefined") return false;
-  useEffect(() => {}, [window]);
   window.addEventListener(
     "load",
     (event) => {
