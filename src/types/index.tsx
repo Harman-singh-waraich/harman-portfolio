@@ -5,7 +5,7 @@ export interface Skill {
 export interface Project {
   title: string;
   techstack: string;
-  thumbnail: string | undefined;
+  thumbnail: string;
   description: string;
   liveLink: string | undefined;
   repo: string | undefined;

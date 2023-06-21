@@ -1,7 +1,7 @@
 import { SocailIcon } from "@/components/SocailIcon";
 import * as React from "react";
 
-export function Contact() {
+export default function Contact() {
   return (
     <div
       id="contact"

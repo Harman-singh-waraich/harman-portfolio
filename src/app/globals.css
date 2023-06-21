@@ -4,7 +4,7 @@
 body {
   background-color: #282c34;
   background-image: url("/images/background.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: contain;
 }
 html {
@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#landing {
+  scroll-snap-align: start;
+  scroll-padding-top: 30px;
+}
 #skills {
   scroll-snap-align: start;
   scroll-padding-top: 30px;
@@ -27,4 +31,25 @@ html {
 #contact {
   scroll-snap-align: start;
   scroll-padding-top: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282c34;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c778de;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

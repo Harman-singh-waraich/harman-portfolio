@@ -1,20 +1,18 @@
+import { SOCIAL_LINKS } from "@/assets/data";
+import Image from "next/image";
+
 export const SocailIcon = ({ platform }: { platform: string }) => {
-  const SOCIAL_LINKS: { [key: string]: string } = {
-    Github: "https://github.com/Harman-singh-waraich",
-    LinkedIn: "https://www.linkedin.com/in/turban-coder/",
-    Discord: "https://discord.com/users/705450070161621004",
-    Twitter: "https://twitter.com/Harmeet68057757",
-    Email: "mailto:waraichharman68@gmail.com",
-  };
   return (
     <a
       href={`${SOCIAL_LINKS[platform]}`}
       target="_blank"
-      className="cursor-pointer  transition-all duration-500 hover:scale-125"
+      className="w-7 md:w-8 h-7 md:h-8 cursor-pointer  transition-all duration-500 hover:scale-125 relative"
     >
-      <img
+      <Image
         src={`/images/${platform}.svg`}
-        className=" w-7 md:w-8 px-1 md:px-0"
+        alt="social"
+        fill={true}
+        className="px-1 md:px-0"
       />
     </a>
   );

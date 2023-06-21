@@ -1,11 +1,20 @@
-import { Project } from "@/interfaces";
+import { Project } from "@/types";
+import Image from "next/image";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="md:w-80 border border-white flex flex-col justify-start items-start">
-      <img className="cover object-contain" src={project.thumbnail} />
+      <div className="w-full min-h-[160px] relative">
+        <Image
+          className="object-contain"
+          src={project.thumbnail}
+          fill={true}
+          alt="thumbnail"
+        />
+      </div>
+
       <div className="min-w-full h-0.1  bg-white "></div>
-      <div className="text-gray-400 text-base md:text-lg px-2 py-1">
+      <div className="text-gray-400 text-sm md:text-base px-2 py-1">
         {project.techstack}
       </div>
       <div className="min-w-full h-0.1  bg-white "></div>
@@ -13,7 +22,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         {" "}
         {project.title}
       </div>
-      <div className="text-gray-400 text-sm md:text-lg px-2">
+      <div className="text-gray-400 text-sm md:text-base px-2">
         {project.description}
       </div>
       <a href={project.liveLink} target="_blank" rel="noreferrer">

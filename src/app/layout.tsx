@@ -1,8 +1,8 @@
-import Appbar from "@/pages/Appbar";
+import Appbar from "@/sections/Appbar";
 import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
-import { Footer } from "@/pages/Footer";
+import Footer from "@/sections/Footer";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
