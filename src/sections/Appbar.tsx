@@ -30,7 +30,7 @@ const Appbar = () => {
     {
       name: "projects",
       to: "/#projects",
-      isVisible: useIntersection("#projects", "-100px"),
+      isVisible: useIntersection("#projects", "0px"),
     },
     {
       name: "contacts",
@@ -44,7 +44,7 @@ const Appbar = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row container justify-between align-middle content-center fixed  min-w-full md:w-auto bg-[#282c34] py-2  md:px-16 lg:px-24 pb-5 z-50">
+    <div className="flex flex-col md:flex-row lg:flex-row container justify-between align-middle content-center fixed  min-w-full md:w-auto bg-[#282c34] py-2 px-2 md:px-16 lg:px-24 md:pb-5 z-50">
       <div className="flex flex-grow-0 justify-between align-middle content-center items-center lg:pr-5">
         <a
           href={"/#landing"}
@@ -54,7 +54,7 @@ const Appbar = () => {
           <Image
             src={"/images/logo_2.png"}
             alt="Turban Coder"
-            width={120}
+            width={110}
             height={44}
           />
         </a>
