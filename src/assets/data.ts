@@ -11,7 +11,7 @@ export const projects: Project[] = [
   },
   {
     title: "Pixel Paths",
-    thumbnail: "/images/docthereum.png",
+    thumbnail: "/images/pixelpaths.png",
     description: "An algorithm visualiser",
     techstack: "React Firebase",
     liveLink: "https://pixel-paths.web.app/",
@@ -19,11 +19,11 @@ export const projects: Project[] = [
   },
   {
     title: "Goal Setter",
-    thumbnail: "/images/docthereum.png",
+    thumbnail: "/images/goalsetter.png",
     description: "An auth based goal setter",
     techstack: "React JWT Redux",
-    liveLink: "https://splendorous-cassata-b0c6d5.netlify.app/login",
-    repo: "https://docthereum.web.app/",
+    liveLink: "https://splendorous-cassata-b0c6d5.netlify.app",
+    repo: "https://github.com/Harman-singh-waraich/GoalSetter",
   },
   {
     title: "Portfolio",
@@ -34,39 +34,39 @@ export const projects: Project[] = [
     repo: "https://docthereum.web.app/",
   },
 ];
-const smallProjects = [
+export const smallProjects = [
   {
     title: "B-healthy",
-    thumbnail: "/images/docthereum.png",
+    thumbnail: "/images/bhealthy.png",
     description: "A Decentralised Healthcare App",
     techstack: "React Ethereum Web3 IPFS Material-UI Firebase Axios",
-    liveLink: "https://docthereum.web.app/",
-    repo: "https://github.com/Harman-singh-waraich/Docthereum",
+    liveLink: "https://b-healthy721.web.ap",
+    repo: "https://github.com/Harman-singh-waraich/B-Healthy",
   },
   {
     title: "Ticketer",
-    thumbnail: "/images/docthereum.png",
+    thumbnail: "/images/ticketer.png",
     description: "A incentivised content creation platform",
     techstack: "React Ethereum Web3 Firebase React-lifecycles Material-UI",
-    liveLink: "https://docthereum.web.app/",
-    repo: "https://github.com/Harman-singh-waraich/Docthereum",
+    liveLink: "https://b-healthy721.web.ap",
+    repo: "https://github.com/Harman-singh-waraich/Ticketer",
   },
   {
     title: "Vesting",
-    thumbnail: "/images/docthereum.png",
+    thumbnail: "/images/vesting.png",
     description:
       "A fork of sushi-swap's staking contract with progressive releases.",
     techstack: "React Ethereum Web3 Hardhat",
     liveLink: "https://vesting321.netlify.app/",
-    repo: "https://github.com/Harman-singh-waraich/Docthereum",
+    repo: "https://github.com/Harman-singh-waraich/Vesting",
   },
   {
     title: "Chit fund",
-    thumbnail: "/images/docthereum.png",
+    thumbnail: "/images/chitfund.png",
     description: "A Decentralised rotatory savings contract.",
     techstack: "Solidity Aion-Scheduler Hardhat",
-    liveLink: "https://docthereum.web.app/",
-    repo: "https://github.com/Harman-singh-waraich/Docthereum",
+    liveLink: undefined,
+    repo: "https://github.com/Harman-singh-waraich/Chit-Fund",
   },
 ];
 export const achievements = [

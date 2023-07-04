@@ -45,13 +45,19 @@ const Appbar = () => {
   };
   return (
     <div className="flex flex-col md:flex-row lg:flex-row container justify-between align-middle content-center fixed  min-w-full md:w-auto bg-[#282c34] py-2  md:px-16 lg:px-24 pb-5 z-50">
-      <div className="flex flex-grow-0 justify-between align-middle content-center items-center lg:px-5">
-        <Image
-          src={"/images/TurbanCoder.png"}
-          alt="Turban Coder"
-          width={164}
-          height={84}
-        />
+      <div className="flex flex-grow-0 justify-between align-middle content-center items-center lg:pr-5">
+        <a
+          href={"/#landing"}
+          style={{ scrollBehavior: "smooth" }}
+          key={"/#landing"}
+        >
+          <Image
+            src={"/images/logo_2.png"}
+            alt="Turban Coder"
+            width={120}
+            height={44}
+          />
+        </a>
 
         <div className="md:hidden float-right">
           <button

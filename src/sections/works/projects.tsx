@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ProjectCard } from "../../components/projectCard";
 import { Project } from "@/types";
-import { projects } from "@/assets/data";
+import { projects, smallProjects } from "@/assets/data";
 
 export default function Projects() {
   return (
@@ -56,7 +56,7 @@ export default function Projects() {
             small-projects
           </span>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-auto gap-8 pt-4">
-            {projects.map((project: Project, index: number) => (
+            {smallProjects.map((project: Project, index: number) => (
               <ProjectCard project={project} key={index} />
             ))}
           </div>

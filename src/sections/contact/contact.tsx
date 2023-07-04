@@ -36,7 +36,7 @@ export default function Contact() {
             <div className="border border-white p-4 ">
               <div className="md:text-lg text-white">Message me here</div>
               <div className="flex flex-row items-center text-sm md:text-base text-gray-400">
-                <SocailIcon platform="Discord" /> Calib#6972
+                <SocailIcon platform="Discord" /> hrmn_singh
               </div>
               <div className="flex flex-row items-center text-sm md:text-base text-gray-400">
                 <SocailIcon platform="Email" /> WaraichHarman68@gmail.com
