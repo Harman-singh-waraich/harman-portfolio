@@ -116,7 +116,7 @@ export const skills: Skill[] = [
 
 export const SOCIAL_LINKS: { [key: string]: string } = {
   Github: "https://github.com/Harman-singh-waraich",
-  LinkedIn: "https://www.linkedin.com/in/turban-coder/",
+  Linkedin: "https://www.linkedin.com/in/turban-coder/",
   Discord: "https://discord.com/users/705450070161621004",
   Twitter: "https://twitter.com/Harmeet68057757",
   Email: "mailto:waraichharman68@gmail.com",
