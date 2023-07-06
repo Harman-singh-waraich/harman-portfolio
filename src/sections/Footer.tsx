@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="flex flex-col items-start justify-start py-2 ">
         <div className="text-base md:text-xl text-white pl-1">Media</div>
         <div className="flex flex-row text-md text-white">
-          {["Github", "Discord", "Twitter", "Email", "LinkedIn"].map(
+          {["Github", "Discord", "Twitter", "Email", "Linkedin"].map(
             (social: string, index: number) => (
               <SocailIcon platform={social} key={index} />
             )

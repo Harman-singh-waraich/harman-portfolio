@@ -27,11 +27,11 @@ export const projects: Project[] = [
   },
   {
     title: "Portfolio",
-    thumbnail: "/images/docthereum.png",
-    description: "My Portfolio site",
+    thumbnail: "/images/portfolio.png",
+    description: "My Portfolio site. Your on it right now ;)",
     techstack: "NextJS Typescript Tailwind",
-    liveLink: "https://docthereum.web.app/",
-    repo: "https://docthereum.web.app/",
+    liveLink: "https://github.com/Harman-singh-waraich/harman-portfolio",
+    repo: "https://turbancoder.dev",
   },
 ];
 export const smallProjects = [

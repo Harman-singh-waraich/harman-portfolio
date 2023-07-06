@@ -52,7 +52,7 @@ const Appbar = () => {
           key={"/#landing"}
         >
           <Image
-            src={"/images/logo_2.png"}
+            src={"/images/logo2.svg"}
             alt="Turban Coder"
             width={110}
             height={44}

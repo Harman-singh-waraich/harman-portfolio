@@ -8,6 +8,10 @@ const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 export const metadata = {
   title: "Turban Coder",
   description: "Portfolio of Harmeet Singh",
+  type: "website",
+  url: "https://turbancoder.dev",
+  robots: "index, follow",
+  keywords: "turban coder portfolio blockchain fullstack developer engineer",
 };
 
 export default function RootLayout({
