@@ -1,4 +1,4 @@
-import { SocailIcon } from "@/components/SocailIcon";
+import { SocialIcon } from "@/components/SocialIcon";
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="flex flex-row text-md text-white">
           {["Github", "Discord", "Twitter", "Email", "Linkedin"].map(
             (social: string, index: number) => (
-              <SocailIcon platform={social} key={index} />
+              <SocialIcon platform={social} key={index} />
             )
           )}
         </div>

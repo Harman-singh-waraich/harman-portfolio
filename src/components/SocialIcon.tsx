@@ -1,7 +1,7 @@
 import { SOCIAL_LINKS } from "@/assets/data";
 import Image from "next/image";
 
-export const SocailIcon = ({ platform }: { platform: string }) => {
+export const SocialIcon = ({ platform }: { platform: string }) => {
   return (
     <a
       href={`${SOCIAL_LINKS[platform]}`}

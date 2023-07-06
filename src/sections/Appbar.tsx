@@ -1,9 +1,11 @@
 "use client";
-import { SocailIcon } from "@/components/SocailIcon";
+import dynamic from "next/dynamic";
+const SocialIcon = dynamic(() =>
+  import("@/components/SocialIcon").then((mod) => mod.SocialIcon)
+);
 import useIntersection from "@/hooks/useIntersection";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 interface NavigationItem {
   name: string;
   to: string;
@@ -132,7 +134,7 @@ const Appbar = () => {
         <div className="flex flex-row flex-wrap p-4">
           {["Github", "Discord", "LinkedIn", "Email", "Twitter"].map(
             (social: string, index: number) => (
-              <SocailIcon platform={social} key={index} />
+              <SocialIcon platform={social} key={index} />
             )
           )}
         </div>

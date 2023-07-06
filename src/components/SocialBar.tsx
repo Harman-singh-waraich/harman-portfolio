@@ -1,4 +1,4 @@
-import { SocailIcon } from "./SocailIcon";
+import { SocialIcon } from "./SocialIcon";
 
 export const SocialBar = () => {
   return (
@@ -6,7 +6,7 @@ export const SocialBar = () => {
       <div className="w-0.1 h-32 bg-white"> </div>
       {["Github", "Discord", "Twitter", "Linkedin", "Email"].map(
         (platform: string, index: number) => (
-          <SocailIcon platform={platform} key={index} />
+          <SocialIcon platform={platform} key={index} />
         )
       )}
     </div>

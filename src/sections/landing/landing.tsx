@@ -1,4 +1,4 @@
-import Animation from "@/components/player";
+import { Animation } from "@/components/player";
 import * as React from "react";
 
 export default function Landing() {
