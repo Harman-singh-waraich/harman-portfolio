@@ -4,6 +4,8 @@ import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
 import Footer from "@/sections/Footer";
 import Head from "next/head";
+import Script from "next/script";
+import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
@@ -16,19 +18,6 @@ export const metadata = {
   sitename: "Turban Coder",
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  headline: "Turban Coder",
-  description: "Portfolio of Harmeet Singh",
-  author: [
-    {
-      "@type": "Person",
-      name: "Harmeet Singh",
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -36,14 +25,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <title>Turban Coder</title>
       <Head>
+        <title>Turban Coder</title>
         <script
-          key="structured-data"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={addStructuredData()}
+          key="structured-data"
         />
       </Head>
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={addStructuredData()}
+        key="structured-data"
+      />
       <body className={fira.className}>
         <Appbar />
         <SocialBar />
