@@ -3,7 +3,6 @@ import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
 import Footer from "@/sections/Footer";
-import Head from "next/head";
 import Script from "next/script";
 import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
@@ -25,14 +24,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Turban Coder</title>
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={addStructuredData()}
           key="structured-data"
         />
-      </Head>
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link
+          rel="icon"
+          href="/icon.svg"
+          type="image/svg+xml"
+          sizes="480x480"
+        ></link>
+      </head>
       <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={addStructuredData()}
