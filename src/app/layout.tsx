@@ -3,7 +3,6 @@ import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
 import Footer from "@/sections/Footer";
-import Script from "next/script";
 import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 
@@ -26,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script
+          id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={addStructuredData()}
           key="structured-data"
@@ -38,11 +38,7 @@ export default function RootLayout({
           sizes="480x480"
         ></link>
       </head>
-      <Script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={addStructuredData()}
-        key="structured-data"
-      />
+
       <body className={fira.className}>
         <Appbar />
         <SocialBar />
