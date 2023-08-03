@@ -132,7 +132,7 @@ const Appbar = () => {
           })}
         </div>
         <div className="flex flex-row flex-wrap p-4">
-          {["Github", "Discord", "LinkedIn", "Email", "Twitter"].map(
+          {["Github", "Discord", "Linkedin", "Email", "Twitter"].map(
             (social: string, index: number) => (
               <SocialIcon platform={social} key={index} />
             )
