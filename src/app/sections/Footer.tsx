@@ -19,7 +19,7 @@ export default function Footer() {
           )}
         </div>
       </div>
-      <div className="absolute left-0 bottom-0 min-w-full text-sm md:text-base text-white text-center p-4">
+      <div className="absolute left-0 bottom-2 min-w-full text-sm md:text-base text-white text-center p-4 pb-8">
         {" "}
         @ copyright 2023. Made with ♡ by Harmeet
       </div>

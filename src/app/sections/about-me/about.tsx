@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Animation } from "../../components/player";
+import { Animation } from "../../../components/player";
 
 export default function About() {
   return (

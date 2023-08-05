@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ProjectCard } from "../../components/projectCard";
+import { ProjectCard } from "../../../components/projectCard";
 import { Project } from "@/types";
 import { projects, smallProjects } from "@/assets/data";
 

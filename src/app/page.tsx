@@ -1,8 +1,9 @@
-import About from "@/sections/about-me/about";
-import Contact from "@/sections/contact/contact";
-import Landing from "@/sections/landing/landing";
-import Skills from "@/sections/skills/skills";
-import Projects from "@/sections/works/projects";
+import About from "./sections/about-me/about";
+import Blogs from "./sections/blogs/blogs";
+import Contact from "./sections/contact/contact";
+import Landing from "./sections/landing/landing";
+import Skills from "./sections/skills/skills";
+import Projects from "./sections/works/projects";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      {/* @ts-expect-error Async Server Component */}
+      <Blogs />
       <Contact />
     </main>
   );

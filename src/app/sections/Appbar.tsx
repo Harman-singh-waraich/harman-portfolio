@@ -32,7 +32,12 @@ const Appbar = () => {
     {
       name: "projects",
       to: "/#projects",
-      isVisible: useIntersection("#projects", "0px"),
+      isVisible: useIntersection("#projects", "-100px"),
+    },
+    {
+      name: "blogs",
+      to: "/#blogs",
+      isVisible: useIntersection("#blogs", "0px"),
     },
     {
       name: "contacts",

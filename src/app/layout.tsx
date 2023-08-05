@@ -1,8 +1,8 @@
-import Appbar from "@/sections/Appbar";
+import Appbar from "@/app/sections/Appbar";
 import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
-import Footer from "@/sections/Footer";
+import Footer from "@/app/sections/Footer";
 import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 
@@ -30,6 +30,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={addStructuredData()}
           key="structured-data"
         />
+
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link
           rel="icon"

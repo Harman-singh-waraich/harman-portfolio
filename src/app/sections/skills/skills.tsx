@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SkillCard } from "../../components/skillCard";
+import { SkillCard } from "../../../components/skillCard";
 import { Skill } from "@/types";
 import Line from "@/components/Line";
 import { achievements, skills } from "@/assets/data";
