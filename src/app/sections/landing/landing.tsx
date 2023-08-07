@@ -86,7 +86,6 @@ export default function Landing() {
             ></iframe>
           </div>
         </div>
-        <div className="w-100"></div>
       </div>
     </div>
   );
