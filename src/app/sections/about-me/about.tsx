@@ -41,9 +41,9 @@ export default function About() {
             <br />I happily embrace the unique identity of the{" "}
             <span className="text-[#C778DE]">Turban Coder</span>
           </div>
-          <div className="w-3/5 lg:w-1/3 h-36 md:h-60 lg:h-80 flex justify-center items-center">
+          <div className="w-3/5 md:w-2/5 lg:w-1/3  flex justify-center items-center">
             {" "}
-            {/* <Animation src={"wumpus"} /> */}
+            <img src={"images/wumpus.svg"} alt="wumpus" />
           </div>
         </div>
       </div>
