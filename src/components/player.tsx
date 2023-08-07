@@ -4,7 +4,7 @@ import { useRive } from "@rive-app/react-canvas";
 
 export const Animation = ({ src }: { src: string }) => {
   const { rive, RiveComponent } = useRive({
-    src: `${src}.riv`,
+    src: `animations/${src}.riv`,
     artboard: src,
     autoplay: true,
     // layout: new Layout({
