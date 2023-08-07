@@ -37,6 +37,7 @@ export default function Error({
           height="100%"
           src="https://rive.app/community/2951-6185-dog-404/embed"
           allowFullScreen
+          loading="lazy"
         ></iframe>
       </div>
     </div>

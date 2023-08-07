@@ -23,6 +23,7 @@ export default function NotFound() {
           height="100%"
           src="https://rive.app/s/b1TsYnZIUUG41YG6W1PZFA/embed"
           allowFullScreen
+          loading="lazy"
         ></iframe>
       </div>
     </div>

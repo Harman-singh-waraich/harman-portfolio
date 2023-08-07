@@ -49,6 +49,7 @@ export default function About() {
               height="100%"
               src="https://rive.app/s/0J_t-NMwDUCc6ONJ7kShFw/embed"
               allowFullScreen
+              loading="lazy"
             ></iframe>
           </div>
         </div>

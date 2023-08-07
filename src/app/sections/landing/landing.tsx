@@ -83,6 +83,7 @@ export default function Landing() {
               height="100%"
               src="https://rive.app/s/0m9TP-uGAEC3i09JThGswQ/embed"
               allowFullScreen
+              loading="lazy"
             ></iframe>
           </div>
         </div>
