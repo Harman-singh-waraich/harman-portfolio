@@ -29,9 +29,9 @@ export const projects: Project[] = [
     title: "Portfolio",
     thumbnail: "/images/portfolio.png",
     description: "My Portfolio site. Your on it right now ;)",
-    techstack: "NextJS Typescript Tailwind",
-    liveLink: "https://github.com/Harman-singh-waraich/harman-portfolio",
-    repo: "https://turbancoder.dev",
+    techstack: "NextJS Typescript Tailwind Appwrite",
+    liveLink: "https://turbancoder.dev",
+    repo: "https://github.com/Harman-singh-waraich/harman-portfolio",
   },
 ];
 export const smallProjects = [
@@ -91,7 +91,15 @@ export const skills: Skill[] = [
   },
   {
     field: "Tools",
-    technologies: ["Git", "Postman", "NGINX", "Truffle", "Ganache", "Remix"],
+    technologies: [
+      "Git",
+      "Postman",
+      "NGINX",
+      "Truffle",
+      "Ganache",
+      "Remix",
+      "Rive",
+    ],
   },
   {
     field: "Languages",
@@ -106,7 +114,7 @@ export const skills: Skill[] = [
   },
   {
     field: "Databases",
-    technologies: ["Mongodb"],
+    technologies: ["Mongodb", "Appwrite"],
   },
   {
     field: "Others",

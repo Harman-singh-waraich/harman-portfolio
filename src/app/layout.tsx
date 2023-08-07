@@ -5,6 +5,7 @@ import { SocialBar } from "@/components/SocialBar";
 import Footer from "@/app/sections/Footer";
 // import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
+require("dotenv").config();
 
 export const metadata = {
   title: "Turban Coder",

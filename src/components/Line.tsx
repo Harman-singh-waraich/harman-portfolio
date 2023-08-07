@@ -3,7 +3,7 @@ const Line = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2.1 -2.1 4.2 4.2">
     <style>
       {
-        "\n#path {\n  stroke-dasharray: 100;\n  stroke-dashoffset: 100;\n  animation: dash 10s linear forwards infinite;\n}\n\n@keyframes dash {\n  to {\n    stroke-dashoffset: 0;\n  }\n}\n  "
+        "\n#path {\n  stroke-dasharray: 100;\n  stroke-dashoffset: 100;\n  animation: dash 5s ease-in-out forwards infinite;\n}\n\n@keyframes dash {\n  to {\n    stroke-dashoffset: 0;\n  }\n}\n  "
       }
     </style>
     <path

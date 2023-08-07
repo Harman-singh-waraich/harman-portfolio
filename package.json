@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^13.4.12",
-    "@next/font": "^13.4.4",
     "@rive-app/canvas": "^2.1.2",
     "@rive-app/react-canvas": "^4.1.2",
     "@tailwindcss/typography": "^0.5.9",
