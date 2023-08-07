@@ -21,7 +21,7 @@ export default function Error({
         </span>
         <span className="text-lg md:text-xl font-bold text-white">
           I must have overlooked something, do reach out to me and say
-          <span className="text-pink-400"> "I told you so"</span>
+          <span className="text-pink-400"> &quot; I told you so &quot;</span>
         </span>
         <button
           className=" w-1/2 border border-pink-400 p-1 md:p-2 text-sm md:text-base text-white hover:scale-105 bg-pink-400 bg-opacity-10 hover:border-gray-400 transition-colors my-8"
