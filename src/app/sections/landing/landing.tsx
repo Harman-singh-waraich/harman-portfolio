@@ -77,7 +77,7 @@ export default function Landing() {
             </a>
           </div>
 
-          <div className=" w-1/2 md:w-1/2 lg:w-1/3 self-end">
+          <div className=" w-1/2 md:w-1/2 lg:w-1/3 h-48 md:h-60 lg:h-80 self-end">
             <Animation src={"coder"} />
           </div>
         </div>

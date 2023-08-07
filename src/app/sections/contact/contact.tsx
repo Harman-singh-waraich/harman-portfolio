@@ -1,4 +1,5 @@
 import { SocialIcon } from "@/components/SocialIcon";
+import Link from "next/link";
 import * as React from "react";
 
 export default function Contact() {
@@ -48,17 +49,18 @@ export default function Contact() {
           <div className="text-sm md:text-base text-gray-400 text-left py-3">
             If your a recruiter looking for talent, here&apos;s my resume ;)
           </div>
-          <a
+          <Link
             href={
               "https://docs.google.com/document/d/1e-bGI62e6m-iL4lXbkDDKdbUHGXMPuP8"
             }
             rel="noreferrer"
             target="_blank"
+            prefetch={false}
           >
             <button className="border border-pink-400 p-1 md:p-2 text-sm md:text-base text-white hover:scale-105 bg-pink-400 bg-opacity-10 hover:border-gray-400 transition-colors ">
               {"Resume <~>"}
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

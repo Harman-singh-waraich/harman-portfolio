@@ -1,17 +1,21 @@
 "use client";
-import coder from "@/assets/coder.json";
-import wumpus from "@/assets/wumpus.json";
-import dynamic from "next/dynamic";
-const Player = dynamic(() =>
-  import("@lottiefiles/react-lottie-player").then((mod) => mod.Player)
-);
+
+import { useRive } from "@rive-app/react-canvas";
 
 export const Animation = ({ src }: { src: string }) => {
-  const data: { [key: string]: string } = {
-    coder: JSON.stringify(coder),
-    wumpus: JSON.stringify(wumpus),
-  };
+  const { rive, RiveComponent } = useRive({
+    src: `${src}.riv`,
+    artboard: src,
+    autoplay: true,
+    // layout: new Layout({
+    //   fit: Fit.FitWidth,
+    //   alignment: Alignment.TopCenter,
+    // }),
+  });
+  // JSON.parse(data[src])
   return (
-    <Player src={JSON.parse(data[src])} className="player" loop autoplay />
+    <div className=" w-full h-full flex justify-center items-center">
+      <RiveComponent />
+    </div>
   );
 };
