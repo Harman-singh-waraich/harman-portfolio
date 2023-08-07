@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Animation } from "@/components/player";
+// import { Animation } from "@/components/player";
 
 export default function About() {
   return (
@@ -43,7 +43,7 @@ export default function About() {
           </div>
           <div className="w-3/5 lg:w-1/3 h-36 md:h-60 lg:h-80 flex justify-center items-center">
             {" "}
-            <Animation src={"wumpus"} />
+            {/* <Animation src={"wumpus"} /> */}
           </div>
         </div>
       </div>

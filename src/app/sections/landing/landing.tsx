@@ -1,4 +1,4 @@
-import { Animation } from "@/components/player";
+// import { Animation } from "@/components/player";
 import * as React from "react";
 
 export default function Landing() {
@@ -78,7 +78,7 @@ export default function Landing() {
           </div>
 
           <div className=" w-1/2 md:w-1/2 lg:w-1/3 h-48 md:h-60 lg:h-80 self-end">
-            <Animation src={"coder"} />
+            {/* <Animation src={"coder"} /> */}
           </div>
         </div>
       </div>
