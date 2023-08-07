@@ -43,7 +43,13 @@ export default function About() {
           </div>
           <div className="w-3/5 md:w-2/5 lg:w-1/3  flex justify-center items-center">
             {" "}
-            <img src={"images/wumpus.svg"} alt="wumpus" />
+            <iframe
+              style={{ border: "none" }}
+              width="100%"
+              height="100%"
+              src="https://rive.app/s/0J_t-NMwDUCc6ONJ7kShFw/embed"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>

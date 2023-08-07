@@ -77,9 +77,16 @@ export default function Landing() {
           </div>
 
           <div className=" w-1/2 md:w-1/2 lg:w-1/3 h-48 md:h-60 lg:h-80 self-end">
-            <img src={"images/coder.svg"} alt="coder" />
+            <iframe
+              style={{ border: "none" }}
+              width="100%"
+              height="100%"
+              src="https://rive.app/s/0m9TP-uGAEC3i09JThGswQ/embed"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
+        <div className="w-100"></div>
       </div>
     </div>
   );
