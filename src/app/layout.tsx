@@ -3,7 +3,7 @@ import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
 import Footer from "@/app/sections/Footer";
-import { addStructuredData } from "@/components/StructuredData";
+// import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
@@ -24,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        {/* <script
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={addStructuredData()}
           key="structured-data"
-        />
+        /> */}
 
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link
