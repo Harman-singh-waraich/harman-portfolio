@@ -1,13 +1,25 @@
+"use client";
 import * as React from "react";
 import { ProjectCard } from "../../../components/projectCard";
 import { Project } from "@/types";
 import { projects, smallProjects } from "@/assets/data";
+import { useInView, motion } from "framer-motion";
 
 export default function Projects() {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, {
+    margin: "0px -100px -50px 0px",
+  });
   return (
-    <div id="projects" className="min-h-fit py-28 min-w-full">
+    <div id="projects" ref={ref} className="min-h-fit py-28 min-w-full">
       <div className="flex  flex-col relative min">
-        <div>
+        <div
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+        >
           <span
             className="text-xl md:text-3xl font-bold "
             style={{
@@ -20,9 +32,14 @@ export default function Projects() {
             projects
           </span>
         </div>
-        <div className="text-sm md:text-base text-white py-3">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="text-sm md:text-base text-white py-3"
+        >
           {"What i've made?"}
-        </div>
+        </motion.div>
 
         <div className="my-4">
           <span

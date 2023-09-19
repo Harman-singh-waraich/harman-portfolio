@@ -1,15 +1,28 @@
+"use client";
 import { SocialIcon } from "@/components/SocialIcon";
+import { useInView } from "framer-motion";
 import Link from "next/link";
 import * as React from "react";
 
 export default function Contact() {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, {
+    margin: "0px -100px -50px 0px",
+  });
   return (
     <div
       id="contact"
+      ref={ref}
       className="min-h-fit md:min-h-[75vh] py-20 md:py-28 min-w-full"
     >
       <div className="flex justify-content-center flex-col">
-        <div>
+        <div
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+        >
           <span
             className="text-xl md:text-3xl font-bold "
             style={{

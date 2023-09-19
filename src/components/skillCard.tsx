@@ -1,8 +1,12 @@
 import { Skill } from "@/types";
-
+import { motion } from "framer-motion";
 export const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
-    <div className=" w-40 lg:w-64 border border-white flex flex-col justify-start items-center lg:mr-4 mt-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className=" w-40 lg:w-64 border border-white flex flex-col justify-start items-center lg:mr-4 mt-4"
+    >
       <div className="text-white text-base lg:text-xl"> {skill.field}</div>
       <div className="min-w-full h-0.1  bg-white "></div>
       <div className=" flex flex-wrap">
@@ -12,6 +16,6 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

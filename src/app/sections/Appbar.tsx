@@ -3,9 +3,12 @@ import dynamic from "next/dynamic";
 const SocialIcon = dynamic(() =>
   import("@/components/SocialIcon").then((mod) => mod.SocialIcon)
 );
+
 import useIntersection from "@/hooks/useIntersection";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect } from "react";
+import { useCycle, motion, useAnimate, stagger } from "framer-motion";
+import MenuToggle from "@/components/MenuToggle";
 interface NavigationItem {
   name: string;
   to: string;
@@ -45,11 +48,13 @@ const Appbar = () => {
       isVisible: useIntersection("#contact", "0px"),
     },
   ];
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [scope, animate] = useAnimate();
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  useEffect(() => {
+    animate("a", { opacity: isOpen ? 1 : 0 }, { delay: stagger(0.2) });
+  }, [isOpen, animate]);
+
   return (
     <div className="flex flex-col md:flex-row lg:flex-row container justify-between align-middle content-center fixed  min-w-full md:w-auto bg-[#282c34] py-2 px-2 md:px-16 lg:px-24 md:pb-5 z-50">
       <div className="flex flex-grow-0 justify-between align-middle content-center items-center lg:pr-5">
@@ -66,48 +71,28 @@ const Appbar = () => {
           />
         </a>
 
-        <div className="md:hidden float-right">
-          <button
-            type="button"
-            className="text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="h-6 w-6 fill-current"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {menuOpen ? (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  fill="white"
-                  d="M20.293 16.293L12 8l-8.293 8.293-1.414-1.414L12 5.172l9.707 9.707-1.414 1.414z"
-                  style={{ transition: "fill 0.3s ease-in-out" }}
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  style={{ transition: "fill 0.3s ease-in-out" }}
-                  fill="white"
-                  d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
+        <motion.div
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+          className="md:hidden float-right"
+        >
+          <MenuToggle toggle={() => toggleOpen()} />
+        </motion.div>
       </div>
 
-      <div
+      <motion.div
+        ref={scope}
+        initial={{ y: -200 }}
+        animate={{ y: isOpen ? 0 : -200 }}
         className={` w-max min-w-[90%] m-auto min-h-fit ${
-          menuOpen ? "flex flex-col" : "hidden"
+          isOpen ? "flex flex-col" : "hidden"
         } md:hidden lg:hidden justify-between items-center bg-[#282c34] p-2 border border-white m-2 box-border relative`}
       >
         <div className="w-full flex flex-col ">
           {navigation.map((tab: NavigationItem): React.ReactNode => {
             return (
-              <a
+              <motion.a
+                initial={{ opacity: 0 }}
                 className="p-2"
                 href={tab.to}
                 style={{ scrollBehavior: "smooth" }}
@@ -132,7 +117,7 @@ const Appbar = () => {
                 >
                   {tab.name}
                 </span>
-              </a>
+              </motion.a>
             );
           })}
         </div>
@@ -145,7 +130,7 @@ const Appbar = () => {
         </div>
         <div className="min-w-[10%] min-h-[20%] absolute top-0 right-0 border-t border-r border-white m-2"></div>
         <div className="min-w-[20%] min-h-[10%] absolute bottom-0 left-0 border-b border-l border-white m-2"></div>
-      </div>
+      </motion.div>
 
       {/* //large screen */}
       <div
