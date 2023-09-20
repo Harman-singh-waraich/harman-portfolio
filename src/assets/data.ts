@@ -99,6 +99,8 @@ export const skills: Skill[] = [
       "Ganache",
       "Remix",
       "Rive",
+      "Three.js",
+      "Framer motion",
     ],
   },
   {
