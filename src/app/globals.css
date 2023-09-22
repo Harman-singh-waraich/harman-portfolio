@@ -16,7 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#landing {
+/* #landing {
   scroll-padding-top: 30px;
   @media (min-width: 600px) {
     scroll-snap-align: start;
@@ -51,7 +51,7 @@ html {
     scroll-snap-align: start;
   }
   scroll-padding-top: 10px;
-}
+} */
 
 /* width */
 ::-webkit-scrollbar {
