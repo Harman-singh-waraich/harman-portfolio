@@ -2,6 +2,16 @@ import { Project, Skill } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "Rule Book",
+    thumbnail: "/images/Rulebook.png",
+    description:
+      "Rule Book allows the community to propose rules, vote on them, and even oppose accepted rules, all decentralised.",
+    techstack:
+      "Next.js TypeScript Tailwind CSS Redux Web3Modal Wagmi Framer Motion Graph Hardhat",
+    liveLink: "https://rule-book.vercel.app/",
+    repo: "https://github.com/Harman-singh-waraich/RuleBook",
+  },
+  {
     title: "Docthereum",
     thumbnail: "/images/docthereum.png",
     description: "A Decentralised Healthcare App",
