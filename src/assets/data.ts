@@ -3,7 +3,7 @@ import { Project, Skill } from "@/types";
 export const projects: Project[] = [
   {
     title: "Rule Book",
-    thumbnail: "/images/Rulebook.png",
+    thumbnail: "/images/Rulebook.gif",
     description:
       "Rule Book allows the community to propose rules, vote on them, and even oppose accepted rules, all decentralised.",
     techstack:
@@ -13,15 +13,16 @@ export const projects: Project[] = [
   },
   {
     title: "Docthereum",
-    thumbnail: "/images/docthereum.png",
-    description: "A Decentralised Healthcare App",
+    thumbnail: "/images/docthereum.gif",
+    description:
+      "A healthcare d-App that manages health records anonymously and provides research data for medical researchers.",
     techstack: "React Ethereum Web3 Graph Hardhat IPFS Chainlink Remix",
     liveLink: "https://docthereum.web.app/",
     repo: "https://github.com/Harman-singh-waraich/Docthereum",
   },
   {
     title: "Pixel Paths",
-    thumbnail: "/images/pixelpaths.png",
+    thumbnail: "/images/pixelpaths.gif",
     description: "A game based dfs and bfs algorithm visualiser",
     techstack: "React Firebase Tile",
     liveLink: "https://pixel-paths.web.app/",
@@ -29,7 +30,7 @@ export const projects: Project[] = [
   },
   {
     title: "Goal Setter",
-    thumbnail: "/images/goalsetter.png",
+    thumbnail: "/images/goalsetter.gif",
     description:
       "An auth based goal setter using Netlify's serverless functions",
     techstack: "React JWT Redux ExpressJs Netlify MongoDB",
@@ -38,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     title: "Portfolio",
-    thumbnail: "/images/portfolio.png",
+    thumbnail: "/images/portfolio.gif",
     description: "My Portfolio site. Your on it right now ;)",
     techstack: "NextJS Typescript Tailwind Appwrite",
     liveLink: "https://turbancoder.dev",
@@ -47,11 +48,19 @@ export const projects: Project[] = [
 ];
 export const smallProjects = [
   {
+    title: "Polaroid",
+    thumbnail: "/images/Polaroid.gif",
+    description: "A 3d website made with spline and webflow",
+    techstack: "Spline Webflow",
+    liveLink: "https://polaroid-spline.webflow.io/",
+    repo: undefined,
+  },
+  {
     title: "B-healthy",
     thumbnail: "/images/bhealthy.png",
     description: "A Decentralised Healthcare App",
     techstack: "React Ethereum Web3 IPFS Material-UI Firebase Axios",
-    liveLink: "https://b-healthy721.web.ap",
+    liveLink: "https://b-healthy721.web.app",
     repo: "https://github.com/Harman-singh-waraich/B-Healthy",
   },
   {
@@ -59,7 +68,7 @@ export const smallProjects = [
     thumbnail: "/images/ticketer.png",
     description: "A incentivised content creation platform",
     techstack: "React Ethereum Web3 Firebase React-lifecycles Material-UI",
-    liveLink: "https://b-healthy721.web.ap",
+    liveLink: "https://ticketer-demo.web.app",
     repo: "https://github.com/Harman-singh-waraich/Ticketer",
   },
   {
