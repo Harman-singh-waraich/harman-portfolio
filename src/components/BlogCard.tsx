@@ -7,7 +7,7 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
     <div className="md:w-80 border border-white flex flex-col justify-start items-start">
       <div className="w-full min-h-[160px] relative">
         <Image
-          className="object-cover"
+          className="object-contain"
           src={`/images/${blog.thumbnail}.png`}
           fill={true}
           alt="thumbnail"
