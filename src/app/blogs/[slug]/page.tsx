@@ -4,6 +4,36 @@ import Link from "next/link";
 import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
+import siteMetadata from "@/utils/siteMetaData";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; id: string };
+}) {
+  const blog: Blog = await getData(params.slug);
+  return {
+    title: blog.title,
+    description: blog.subtitle,
+    openGraph: {
+      title: blog.title,
+      description: blog.subtitle,
+      url: siteMetadata.siteUrl + "blogs/" + params.slug,
+      siteName: siteMetadata.title,
+      pubishedTime: blog.createdOn,
+      images: [siteMetadata.siteUrl + "images/" + blog.thumbnail + ".png"],
+      authors: [siteMetadata.author],
+      twitter: {
+        card: "summary_large_image",
+        title: blog.title,
+        description: blog.subtitle,
+        images: [siteMetadata.siteUrl + "images/" + blog.thumbnail + ".png"],
+      },
+      locale: "en_US",
+      type: "article",
+    },
+  };
+}
 
 export default async function Page({
   params,

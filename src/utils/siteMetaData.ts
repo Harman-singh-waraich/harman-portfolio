@@ -1,0 +1,22 @@
+const siteMetadata = {
+  title: "Turban Coder",
+  author: "Harmeet Singh",
+  headerTitle: "Turban Coder",
+  description: "Portfolio of Harmeet Singh",
+  language: "en-us",
+  locale: "en-US",
+  type: "website",
+  url: "https://turbancoder.dev/",
+  theme: "system",
+  siteUrl: "https://turbancoder.dev/",
+  siteLogo: "/icon.svg",
+  socialBanner: "/logo.png",
+  email: "waraichharman68@gmail.com",
+  github: "https://github.com/Harman-singh-waraich",
+  twitter: "https://twitter.com/TurbanCoder",
+  linkedin: "https://www.linkedin.com/in/turban-coder/",
+  robots: "index, follow",
+  keywords: "turban coder portfolio blockchain fullstack developer engineer",
+  sitename: "Turban Coder",
+};
+export default siteMetadata;

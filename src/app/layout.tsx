@@ -3,18 +3,31 @@ import "./globals.css";
 import { Fira_Mono } from "next/font/google";
 import { SocialBar } from "@/components/SocialBar";
 import Footer from "@/app/sections/Footer";
+import siteMetadata from "@/utils/siteMetaData";
+import { Metadata } from "next";
+
 // import { addStructuredData } from "@/components/StructuredData";
 const fira = Fira_Mono({ subsets: ["latin"], weight: "400" });
 require("dotenv").config();
 
-export const metadata = {
-  title: "Turban Coder",
-  description: "Portfolio of Harmeet Singh",
-  type: "website",
-  url: "https://turbancoder.dev",
+export const metadata: Metadata = {
+  metadataBase: new URL(siteMetadata.siteUrl),
+  title: {
+    template: `%s | ${siteMetadata.title}`,
+    default: siteMetadata.title,
+  },
+  description: siteMetadata.description,
+  openGraph: {
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    url: siteMetadata.siteUrl,
+    siteName: siteMetadata.headerTitle,
+    images: [siteMetadata.socialBanner],
+    locale: "en_US",
+    type: "website",
+  },
   robots: "index, follow",
   keywords: "turban coder portfolio blockchain fullstack developer engineer",
-  sitename: "Turban Coder",
 };
 
 export default function RootLayout({

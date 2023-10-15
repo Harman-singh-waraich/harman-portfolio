@@ -148,6 +148,6 @@ export const SOCIAL_LINKS: { [key: string]: string } = {
   Github: "https://github.com/Harman-singh-waraich",
   Linkedin: "https://www.linkedin.com/in/turban-coder/",
   Discord: "https://discord.com/users/705450070161621004",
-  Twitter: "https://twitter.com/Harmeet68057757",
+  Twitter: "https://twitter.com/TurbanCoder",
   Email: "mailto:waraichharman68@gmail.com",
 };
