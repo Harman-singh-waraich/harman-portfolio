@@ -1,8 +1,9 @@
-import getConfig from "@/hooks/useConfig";
 import { Blog } from "@/types";
-import { Query } from "appwrite";
 import Image from "next/image";
 import Link from "next/link";
+import fs from "fs";
+import matter from "gray-matter";
+import Markdown from "markdown-to-jsx";
 
 export default async function Page({
   params,
@@ -45,8 +46,7 @@ export default async function Page({
             Harmeet Singh | Fullstack Blockchain Developer
           </div>
           <div className="text-gray-400 text-xs  px-2">
-            {`${new Date(blogContent.$createdAt).toLocaleDateString()}`} | 4 min
-            read
+            {blogContent.createdOn} | 4 min read
           </div>
         </div>
       </div>
@@ -59,28 +59,31 @@ export default async function Page({
         />
       </div> */}
       {/* content */}
-      <div
-        className="prose min-w-full bg-[#282c34]"
-        dangerouslySetInnerHTML={{ __html: blogContent.content }}
-      ></div>
+      <Markdown className="prose prose-sm  prose-invert md:prose-base min-w-full">
+        {blogContent.content}
+      </Markdown>
     </div>
   );
 }
 
 const getData = async (slug: string) => {
-  const { databases, databaseId, collectionId } = getConfig();
-  const res = await databases.listDocuments(databaseId, collectionId, [
-    Query.equal("slug", slug),
-  ]);
-
-  return res.documents[0] as Blog;
+  const fileContent = fs.readFileSync(`src/assets/blogs/${slug}.md`, "utf8");
+  const matterContent = matter(fileContent);
+  return {
+    title: matterContent.data.title,
+    subtitle: matterContent.data.subtitle,
+    createdOn: matterContent.data.date,
+    content: matterContent.content,
+    thumbnail: slug,
+    slug: slug,
+  } as Blog;
 };
 
 export async function generateStaticParams() {
-  const { databases, databaseId, collectionId } = getConfig();
-  const posts = await databases.listDocuments(databaseId, collectionId);
+  const folder = "src/assets/blogs";
+  const files = fs.readdirSync(folder).filter((file) => file.endsWith(".md"));
 
-  return posts.documents.map((post) => ({
-    slug: post.slug,
+  return files.map((fileName) => ({
+    slug: fileName.replace(".md", ""),
   }));
 }

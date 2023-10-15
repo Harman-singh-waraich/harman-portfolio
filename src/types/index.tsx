@@ -13,10 +13,11 @@ export interface Project {
   liveLink: string | undefined;
   repo: string | undefined;
 }
-export interface Blog extends Models.Document {
+export interface Blog {
   title: string;
-  metadesc: string;
+  subtitle: string;
   content: string;
   slug: string;
-  image: string;
+  thumbnail: string;
+  createdOn: string;
 }

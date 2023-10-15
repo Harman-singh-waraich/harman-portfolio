@@ -8,7 +8,7 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
       <div className="w-full min-h-[160px] relative">
         <Image
           className="object-cover"
-          src={blog.image}
+          src={`/images/${blog.thumbnail}.png`}
           fill={true}
           alt="thumbnail"
         />
@@ -22,7 +22,7 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
       </div>
 
       <div className="text-gray-400 text-sm md:text-base px-2 py-1">
-        {blog.metadesc}...
+        {blog.subtitle}
       </div>
 
       <div className=" flex flex-row items-center self-baseline py-2">
